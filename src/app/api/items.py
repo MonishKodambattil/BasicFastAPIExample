@@ -13,8 +13,14 @@ def get_db():
     finally:
         db.close()
 
+@router.get("/items/", response_model=list[item_schemas.Item])
+def list_items(db: Session = Depends(get_db)):
+    item_repo = ItemRepository()
+    return item_repo.get_users(db)
+
+
 @router.post("/items/", response_model=item_schemas.Item)
 def create_item(item: item_schemas.ItemCreate, db: Session = Depends(get_db)):
     item_repo = ItemRepository()
-    new_item = item_repo.create_item(db, Item(title=item.title, description=item.description, owner_id=1)) # replace with actual owner_id
+    new_item = item_repo.create_item(db, Item(title=item.title, description=item.description, owner_id=1))
     return new_item
