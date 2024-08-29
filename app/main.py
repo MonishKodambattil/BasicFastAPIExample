@@ -27,11 +27,7 @@ app = FastAPI(lifespan=lifespan,
             swagger_ui_parameters={"syntaxHighlight.theme": "Outline"},
             title="Basic FastAPI Example",
             description="An example FastAPI basic crud API application",
-            version="0.0.1",
-            license_info={
-                "name": "GNU AFFERO GENERAL PUBLIC LICENSE",
-                "url": "https://www.gnu.org/licenses/agpl-3.0.en.html",
-            },)
+            version="0.0.1")
 
 app.include_router(item_router, prefix="/api/v1")
 
