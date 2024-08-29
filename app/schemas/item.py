@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 class ItemBase(BaseModel):
-    title: str
+    name: str
     description: str = None
 
 class ItemCreate(ItemBase):

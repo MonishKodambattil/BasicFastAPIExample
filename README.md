@@ -1,4 +1,4 @@
 Basic Example 
 
 poetry install
-poetry run uvicorn src.app.main:app 
+poetry run uvicorn app.main:app 
