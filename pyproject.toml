@@ -2,7 +2,7 @@
 name = "basicexample"
 version = "0.1.0"
 description = ""
-authors = ["Monish-Neoito <monish.k@neoito.com>"]
+authors = ["Monish"]
 readme = "README.md"
 packages = [{include = "basicexample", from = "src"}]
 
